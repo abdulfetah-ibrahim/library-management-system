@@ -19,6 +19,16 @@ public final class Library {
     private final static Map<String, Book> books = new HashMap<>();
     private final static File BOOKS_FILE = new File("books.txt");
 
+    public static List<Book> getBooks() {
+        List<Book> newBooksList = new ArrayList<>(books.values());
+
+        return List.copyOf(newBooksList);
+    }
+
+    public static Book getBook(String id) {
+        return books.get(id);
+    }
+
     public static void addBook(Book book) {
         books.put(book.getId(), book);
     }
