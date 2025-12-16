@@ -1,11 +1,13 @@
 package models;
 
 public class Book {
+    private String id;
     private String title;
     private String author;
     private int year;
 
-    public Book(String title, String author, int year) {
+    public Book(String id, String title, String author, int year) {
+        this.id = id;
         this.title = title;
         this.author = author;
         this.year = year;
@@ -17,6 +19,10 @@ public class Book {
         System.out.println("Year: " + year);
     }
 
+    public String getId() {
+        return id;
+    }
+    
     public String getAuthor() {
         return author;
     }
@@ -27,6 +33,10 @@ public class Book {
 
     public int getYear() {
         return year;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public void setAuthor(String author) {
